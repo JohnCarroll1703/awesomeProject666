@@ -23,7 +23,6 @@ func JWTAuth(jwtManager *auth.JWTManager) gin.HandlerFunc {
 			return
 		}
 
-		// Сохраняем userID в контекст
 		c.Set("userID", claims.UserID)
 
 		c.Next()
